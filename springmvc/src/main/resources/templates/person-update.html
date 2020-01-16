@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Spring MVC demo app</title>
+</head>
+<body>
+<h1>Welcome to our app</h1>
+
+<form action="#" th:action="@{/person/upd}" th:object="${person}" method="post">
+  <input type="hidden" th:field="*{id}" id="id" placeholder="">
+  <label for="firstName">Nazwa</label>
+  <input type="text" th:field="*{nazwa}" id="firstName" placeholder="Nazwa Produktu">
+  <label for="lokacja">Lokacja</label>
+  <input type="text" th:field="*{lokacja}" id="lokacja" placeholder="Hangar">
+  <label for="cena">Cena</label>
+  <input type="text" th:field="*{cena}" id="cena" placeholder="0">
+  <label for="ilosc">Ilosc</label>
+  <input type="text" th:field="*{ilosc}" id="ilosc" placeholder="0">
+  <input type="submit" value="aktualizuj">
+</form>
+
+</form>
+</body>
+</html>
